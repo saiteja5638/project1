@@ -1,7 +1,67 @@
 <mvc:View controllerName="project1.controller.View1"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
     xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
+    <SplitApp id="_IDGenSplitApp" >
+    <detailPages>
+    <Page id="_IDGenPage112"  title="Detail page" backgroundDesign="Solid"  >
+
+    <List   >
+    <items>
+    <StandardListItem  title="PLANT_NAME"  description="PLANT_LOC"   ></StandardListItem>
+    </items>
+    
+    </List>
+    
+    
     </Page>
+    <Page id="_IDGenPage212"  title="Detail Detail Page" backgroundDesign="Solid"  >
+    
+    
+    </Page>
+    <Page id="_IDGenPage3"  title="Detail page3" backgroundDesign="Solid" >
+    
+    
+    </Page>
+    </detailPages>
+    
+    
+    <masterPages>
+    <!-- <Page id="_IDGenPage4"   title="Master Page1" backgroundDesign="List" >
+    <List id="_IDGenList" >
+    <items>
+    <StandardListItem id="_IDGenStandardListItem"  title="Master Page2" type="Navigation"   press=".onPressGoToMaster" ></StandardListItem>
+    </items>
+    </List>
+    </Page>
+    <Page id="_IDGenPage5"  title="Master Page2" backgroundDesign="List" showNavButton="true"
+				navButtonPress=".onPressMasterBack" >
+    <List id="_IDGenList1" itemPress=".onListItemPress"   >
+    <items>
+    <StandardListItem id="_IDGenStandardListItem1" type="Active" custom:to="_IDGenPage1"  title="Detail"  ></StandardListItem>
+    <StandardListItem id="_IDGenStandardListItem2" type="Active" custom:to="_IDGenPage2" title="DetailDetail"  ></StandardListItem>
+    <StandardListItem id="_IDGenStandardListItem3" type="Active" custom:to="_IDGenPage3" title="Detail Page3"  ></StandardListItem>
+    </items>
+    </List>
+    </Page> -->
+    <Page id="_IDGenPage1"  title="Master Page1"  >
+    <List id="_IDGenList"  >
+    <items>
+    <StandardListItem id="_IDGenStandardListItem"  title="Go  to MasterPage2" type="Navigation" press=".onPressGoToMaster"  ></StandardListItem>
+    </items>
+    </List>
+
+    </Page>
+    <Page id="_IDGenPage2" title="Master Page2"  navButtonPress="onPressMasterBack"  showNavButton="true"  >
+    <List id="_IDGenList1"  itemPress=".onListItemPress"  >
+    <items>
+    <StandardListItem id="_IDGenStandardListItem1" custom:to="_IDGenPage112"  title="Detail" type="Active" ></StandardListItem>
+    <StandardListItem id="_IDGenStandardListItem2" custom:to="_IDGenPage212" title="DetailDetail" type="Active" ></StandardListItem>
+    <StandardListItem id="_IDGenStandardListItem3" custom:to="_IDGenPage3" title="Detail Page3" type="Active" ></StandardListItem>
+    </items>
+    </List>
+    
+    </Page>
+    </masterPages>
+    </SplitApp>
 </mvc:View>
