@@ -12,19 +12,20 @@
         titleAlignment="Center"
         titleLevel="H1"
     >
-    <List id="_IDGenList"  items="{/QUOT_HEADER_DATA}" >
+<List id="_IDGenList"  items="{/QUOT_HEADER_DATA}">
     <items>
-    <ObjectListItem id="_IDGenObjectListItem1"  title="{ZQUOTATION}" >
-    <firstStatus>
-    <ObjectStatus id="_IDGenObjectStatus" title="{NAME1}" >
-    </ObjectStatus>
-    </firstStatus>
-    <ObjectAttribute id="_IDGenObjectAttribute"  text="{REGIO}" ></ObjectAttribute>
-    <secondStatus>
-    <ObjectStatus text="{ORT01}"  ></ObjectStatus>
-    </secondStatus>
-    </ObjectListItem>
+        <ObjectListItem id="_IDGenObjectListItem1" title="{ZQUOTATION}">
+            <firstStatus>
+                <!-- Use 'text' property instead of 'title' to avoid the colon -->
+                <ObjectStatus id="_IDGenObjectStatus" text="{NAME1}" />
+            </firstStatus>
+            <ObjectAttribute id="_IDGenObjectAttribute" text="{REGIO}" />
+            <secondStatus>
+                <ObjectStatus text="{ORT01}" />
+            </secondStatus>
+            
+        </ObjectListItem>
     </items>
-    </List>
+</List>
     </Page>
 </mvc:View>
