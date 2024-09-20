@@ -1,42 +1,50 @@
 {
-    "xsappname": "project1",
-    "tenant-mode": "dedicated",
-    "description": "Security profile of called application",
-    "scopes": [
-      {
-        "name": "uaa.user",
-        "description": "UAA"
-      },
-      {
-        "name": "$XSAPPNAME.User",
-        "description": "UAA Display"
-      }
-    ],
-    "role-templates": [
-      
-      {
-        "name": "VSupportRole",
-        "description": "UAA VSupportRole",
-        "scope-references": [
-          "$XSAPPNAME.read"
-        ]
-      },
-      {
-        "name": "VSupportAdminRole",
-        "description": "UAA VCPSupportAdminRole",
-        "scope-references": [
-          "$XSAPPNAME.admin"
-        ]
-      }
-    ],
-    "oauth2-configuration": {
-      "token-validity": 3600,
-      "redirect-uris": [
-        "https://*.hana.ondemand.com/**",
-        "https://*.applicationstudio.cloud.sap/**"
+  "xsappname": "project1",
+  "tenant-mode": "dedicated",
+  "description": "Security profile for Project1 application",
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.User",
+      "description": "General User Access"
+    },
+    {
+      "name": "$XSAPPNAME.Admin",
+      "description": "Admin Access"
+    },
+    {
+      "name": "$XSAPPNAME.Support",
+      "description": "Support Access"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "ProjectUserRole",
+      "description": "Role for Project Users",
+      "scope-references": [
+        "$XSAPPNAME.User"
       ]
     },
-    "attributes": [],
-    "authorities-inheritance": false
-  }
-  
+    {
+      "name": "ProjectAdminRole",
+      "description": "Role for Project Admins",
+      "scope-references": [
+        "$XSAPPNAME.Admin"
+      ]
+    },
+    {
+      "name": "ProjectSupportRole",
+      "description": "Role for Project Support",
+      "scope-references": [
+        "$XSAPPNAME.Support"
+      ]
+    }
+  ],
+  "oauth2-configuration": {
+    "token-validity": 3600,
+    "redirect-uris": [
+      "https://*.hana.ondemand.com/**",
+      "https://*.applicationstudio.cloud.sap/**"
+    ]
+  },
+  "authorities-inheritance": false
+}

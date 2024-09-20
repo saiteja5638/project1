@@ -25,6 +25,20 @@
           "odataVersion": "2.0"
         }
       }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "Object-DISPLAY": {
+          "semanticObject": "Object",
+          "action": "DISPLAY",
+          "title": "{{flpTitle}}",
+          "subTitle": "{{flpSubtitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
     }
   },
   "sap.ui": {

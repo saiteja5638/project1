@@ -12,6 +12,19 @@
         titleAlignment="Center"
         titleLevel="H1"
     >
-    <unified:FileUploader id="_IDGenFileUploader"  placeholder="Upload your file here" change="onUpload" ></unified:FileUploader>
+    <List id="_IDGenList"  items="{/QUOT_HEADER_DATA}" >
+    <items>
+    <ObjectListItem id="_IDGenObjectListItem1"  title="{ZQUOTATION}" >
+    <firstStatus>
+    <ObjectStatus id="_IDGenObjectStatus" title="{NAME1}" >
+    </ObjectStatus>
+    </firstStatus>
+    <ObjectAttribute id="_IDGenObjectAttribute"  text="{REGIO}" ></ObjectAttribute>
+    <secondStatus>
+    <ObjectStatus text="{ORT01}"  ></ObjectStatus>
+    </secondStatus>
+    </ObjectListItem>
+    </items>
+    </List>
     </Page>
 </mvc:View>
