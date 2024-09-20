@@ -1,0 +1,42 @@
+{
+    "xsappname": "project1",
+    "tenant-mode": "dedicated",
+    "description": "Security profile of called application",
+    "scopes": [
+      {
+        "name": "uaa.user",
+        "description": "UAA"
+      },
+      {
+        "name": "$XSAPPNAME.User",
+        "description": "UAA Display"
+      }
+    ],
+    "role-templates": [
+      
+      {
+        "name": "VSupportRole",
+        "description": "UAA VSupportRole",
+        "scope-references": [
+          "$XSAPPNAME.read"
+        ]
+      },
+      {
+        "name": "VSupportAdminRole",
+        "description": "UAA VCPSupportAdminRole",
+        "scope-references": [
+          "$XSAPPNAME.admin"
+        ]
+      }
+    ],
+    "oauth2-configuration": {
+      "token-validity": 3600,
+      "redirect-uris": [
+        "https://*.hana.ondemand.com/**",
+        "https://*.applicationstudio.cloud.sap/**"
+      ]
+    },
+    "attributes": [],
+    "authorities-inheritance": false
+  }
+  

@@ -117,5 +117,17 @@
       "async": true,
       "id": "App"
     }
+  },
+  "sap.cloud": {
+    "public": true,
+    "service": "project1"
+  },
+  "sap.cloud.portal": {
+    "roles": [
+      {
+        "name": "demo_role",
+        "description": "Role required to access the Demo App"
+      }
+    ]
   }
 }

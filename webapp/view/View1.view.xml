@@ -1,19 +1,17 @@
-<mvc:View controllerName="project1.controller.View1"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+<mvc:View xmlns:unified="sap.ui.unified"
+    xmlns:f="sap.f"
+    controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
     xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
-    xmlns="sap.m">
-    <Page id="_IDGenPage"  title="Sample Dev" titleAlignment="Center" titleLevel="H1">
-    <IconTabBar id="_IDGenIconTabBar1" >
-    <items>
-    <IconTabFilter id="_IDGenIconTabFilter"  icon="sap-icon://payment-approval" iconColor="Tile"  text="Headers" key="Headers"  > </IconTabFilter>
-    <IconTabFilter id="_IDGenIconTabFilter1"  icon="sap-icon://currency" iconColor="Critical"  text="Items" key="Items"  > </IconTabFilter>
-    </items>
-    </IconTabBar>
-    <List id="_IDGenList"   >
-    <items>
-
-    </items>
-    </List>
-
+    xmlns="sap.m"
+>
+    <Page
+        id="_IDGenPage"
+        title="Sample Dev"
+        titleAlignment="Center"
+        titleLevel="H1"
+    >
+    <unified:FileUploader id="_IDGenFileUploader"  placeholder="Upload your file here" change="onUpload" ></unified:FileUploader>
     </Page>
 </mvc:View>

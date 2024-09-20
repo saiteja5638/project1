@@ -1,7 +1,43 @@
-<mvc:View controllerName="project1.controller.App"
+<mvc:View xmlns:tnt="sap.tnt" controllerName="project1.controller.App"
     xmlns:html="http://www.w3.org/1999/xhtml"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
-    <App id="app">
-    </App>
+ <tnt:ToolPage id="toolPage">
+    <tnt:header>
+       <tnt:ToolHeader >
+       <ToolbarSpacer ></ToolbarSpacer>
+       <SearchField  width="50%"   ></SearchField>
+           <ToolbarSpacer ></ToolbarSpacer>
+       </tnt:ToolHeader>
+    </tnt:header>
+    <tnt:sideContent>
+        <tnt:SideNavigation
+          expanded="false"
+            id="side_content"
+            
+        >
+            <tnt:NavigationList  itemSelect="onSideNavButtonPress"  >
+            <tnt:items>   
+            <tnt:NavigationListItem   icon="sap-icon://menu2"   />
+            <tnt:NavigationListItem text="Home"  key="Home" icon="sap-icon://home" />
+            <tnt:NavigationListItem text="Favourite"  key="Favourite" icon="sap-icon://favorite" />
+            <tnt:NavigationListItem text="Most Watched"  key="Most Watched" icon="sap-icon://fob-watch" />
+            <tnt:NavigationListItem text="Liked Content"  key="Liked Content" icon="sap-icon://heart" />
+            <tnt:NavigationListItem text="History"  key="History" icon="sap-icon://history" />
+            </tnt:items>
+            </tnt:NavigationList>
+            		<tnt:fixedItem>
+				<tnt:NavigationList>
+					<tnt:NavigationListItem text="Setting" icon="sap-icon://action-settings" />
+					<tnt:NavigationListItem selectable="false" href="https://sap.com" target="_blank" text="Support" icon="sap-icon://customer-and-supplier" />
+				</tnt:NavigationList>
+			</tnt:fixedItem>
+        </tnt:SideNavigation>
+        
+    </tnt:sideContent>
+    <tnt:mainContents>
+        <App id="app" />
+    </tnt:mainContents>
+</tnt:ToolPage>
+
 </mvc:View>
