@@ -1,0 +1,11 @@
+stages:
+  Build:
+    buildTool: "npm"
+    buildCommands:
+      - npm install
+      - npm run build
+  Deploy:
+    deployType: "cf_native"
+    deployCommands:
+      - cf login -a <API-URL> -u <USERNAME> -p <PASSWORD> -o <ORG> -s <SPACE>
+      - cf push
