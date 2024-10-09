@@ -1,11 +1,34 @@
+---
+general:
+  buildTool: "npm"
+service:
+  buildToolVersion: "N20"
+  stages:
+    Acceptance:
+      cfCredentialsId: "saiteja-dev-credentials"
 stages:
   Build:
-    buildTool: "npm"
-    buildCommands:
-      - npm install
-      - npm run build
-  Deploy:
-    deployType: "cf_native"
-    deployCommands:
-      - cf login -a <API-URL> -u <USERNAME> -p <PASSWORD> -o <ORG> -s <SPACE>
-      - cf push
+    mavenExecuteStaticCodeChecks: false
+    npmExecuteLint: false
+  Acceptance:
+    cfApiEndpoint: "https://api.cf.us10-001.hana.ondemand.com/"
+    cfOrg: "060a0275trial"
+    cfSpace: "dev"
+    deployType: "standard"
+    cloudFoundryDeploy: true
+    npmExecuteEndToEndTests: false
+  Malware Scan:
+    malwareExecuteScan: false
+  Release:
+    tmsExport: false
+    tmsUpload: false
+    cloudFoundryDeploy: false
+  Additional Unit Tests:
+    npmExecuteScripts: false
+  Compliance:
+    sonarExecuteScan: false
+steps:
+  cloudFoundryDeploy:
+    mtaDeployParameters: "-f --version-rule ALL"
+  artifactPrepareVersion:
+    versioningType: "cloud_noTag"
