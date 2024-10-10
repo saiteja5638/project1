@@ -1,7 +1,7 @@
 ---
 applications:
-  - name: your-app-name
-    path: path/to/your/build/output
+  - name: yproject1
+    path: dist
     memory: 256M
     instances: 1
     buildpacks:
