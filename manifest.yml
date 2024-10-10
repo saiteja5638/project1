@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: yproject1
+  - name: project1
     path: dist
     memory: 256M
     instances: 1
