@@ -1,0 +1,8 @@
+---
+applications:
+  - name: your-app-name
+    path: path/to/your/build/output
+    memory: 256M
+    instances: 1
+    buildpacks:
+      - nodejs_buildpack
