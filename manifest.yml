@@ -4,8 +4,7 @@ applications:
     path: dist
     memory: 256M
     instances: 1
-    disk_quota: 512M  # Optional but recommended
     buildpacks:
-      - nodejs_buildpack  # Optionally add a version or leave as is
-    env:
-      NODE_ENV: production  # Optional, based on your environment
+      - html5-apps-repo
+    services:
+      - html5-apps-repo-rt  # Binding to HTML5 apps repository service
