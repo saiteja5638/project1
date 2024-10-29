@@ -12,20 +12,30 @@
         titleAlignment="Center"
         titleLevel="H1"
     >
-<List id="_IDGenList"  items="{/QUOT_HEADER_DATA}">
-    <items>
-        <ObjectListItem id="_IDGenObjectListItem1" title="{ZQUOTATION}">
-            <firstStatus>
-                <!-- Use 'text' property instead of 'title' to avoid the colon -->
-                <ObjectStatus id="_IDGenObjectStatus" text="{NAME1}" />
-            </firstStatus>
-            <ObjectAttribute id="_IDGenObjectAttribute" text="{REGIO}" />
-            <secondStatus>
-                <ObjectStatus text="{ORT01}" />
-            </secondStatus>
-            
-        </ObjectListItem>
-    </items>
-</List>
+    <Toolbar id="_IDGenToolbar" >
+    <ToolbarSpacer id="_IDGenToolbarSpacer" ></ToolbarSpacer>
+    <unified:FileUploader id="_IDGenFileUploader"   
+           multiple="false"
+        
+        change="handleFileChange"  ></unified:FileUploader>
+    </Toolbar>
+   <Table id="_IDGenTable1"  items="{/JOBlogs}" >
+   <infoToolbar>
+   <Toolbar id="_IDGenToolbar1" >
+   <Button id="_IDGenButton"  text="Submit"  press="handleActionCall" ></Button>
+   </Toolbar>
+   </infoToolbar>
+   <columns>
+   <Column id="_IDGenColumn"   >
+   <Title id="_IDGenTitle"  text="JOB_ID" ></Title>
+   </Column>
+   </columns>
+   <items>
+   <ColumnListItem id="_IDGenColumnListItem" >
+   <Text id="_IDGenText"  text="{ID}" ></Text>
+   </ColumnListItem>
+   </items>
+   </Table>
+   <VBox id="_IDGenVBox1"   ></VBox>
     </Page>
 </mvc:View>
