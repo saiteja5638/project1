@@ -8,8 +8,6 @@ function (Controller,MessageToast) {
     return Controller.extend("project1.controller.View1", {
         onInit: function () {
             that = this;
-
-
             const wsUrl = "wss://060a0275trial-dev-websockects-srv.cfapps.us10-001.hana.ondemand.com";
             this.ws = new WebSocket(wsUrl);
             this.base64String = ""; // Initialize to store chunks
