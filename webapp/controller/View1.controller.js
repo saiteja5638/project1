@@ -9,6 +9,12 @@ function (Controller,MessageToast) {
         onInit: function () {
             that = this;
 
+
+
+
+
+
+
             const wsUrl = "wss://060a0275trial-dev-websockects-srv.cfapps.us10-001.hana.ondemand.com";
             this.ws = new WebSocket(wsUrl);
             this.base64String = ""; // Initialize to store chunks
