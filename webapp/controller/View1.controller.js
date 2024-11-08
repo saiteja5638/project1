@@ -12,6 +12,8 @@ function (Controller,MessageToast) {
             this.ws = new WebSocket(wsUrl);
             this.base64String = ""; // Initialize to store chunks
 
+            
+
             // WebSocket event handlers
             this.ws.onopen = () => {
                 MessageToast.show("Connected to WebSocket server");
